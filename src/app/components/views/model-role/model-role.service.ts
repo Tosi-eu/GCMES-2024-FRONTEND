@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { ModelRole } from './model-role.model';
+import { ChangeRequest, ModelRole } from './model-role.model';
 
 @Injectable({
   providedIn: 'root'
@@ -23,4 +23,8 @@ export class ModelRoleService {
     return this.http.post<ModelRole>(url, newModelRole);
   }
 
+  changeRequestRole(newChangeRequest: ChangeRequest): Observable<ChangeRequest> {
+    const url = `${this.baseUrl}/modelrole`;
+    return this.http.post<ChangeRequest>(url, newChangeRequest);
+  }
 }

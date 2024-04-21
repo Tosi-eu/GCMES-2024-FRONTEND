@@ -84,14 +84,14 @@
       <div class="field">
         <label class="label">Why?</label>
         <div class="control">
-          <input class="input" type="text" placeholder="e.g New organizational structure" #roleChange>
+          <input class="input" type="text" placeholder="e.g New organizational structure" #roleChangeWhy>
         </div>
       </div>
 
       <!-- MODAL CONTENT -->
     </section>
     <footer class="modal-card-foot">
-      <button class="button is-link"(click)="editExistingRoles(roleName.value, roleOrDesc.value, roleChange.value, editExistingFields)"> Request </button>
+      <button class="button is-link"(click)="editExistingRoles(roleName.value, roleOrDesc.value, roleChange.value, roleChangeWhy.value, editExistingFields)"> Request </button>
       <button class="button is-link is-light" (click)="toggleModal(editExistingFields)"> Cancel </button>
     </footer>
   </div>
